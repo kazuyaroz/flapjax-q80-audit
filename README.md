@@ -1,18 +1,16 @@
 # FlapJax Treasury Audit — Q80 (10-29 COT)
 
-**Auditor:** kazuyaroz  
-**BSC Wallet:** 0x9b2a56b912659a24db94473526d2c67814a117Ac  
+**Auditor:** kazuyaroz
+**BSC Wallet:** 0x9b2a56b912659a24db94473526d2c67814a117Ac
 **Date:** 2026-10-31
 
 ## Method
 
 - Block range: eth_getBlockByNumber binary search for 2026-10-29 00:00:00 COT (UTC-5) to 2026-10-30 00:00:00 COT
-- First block: 130,413,458 (2026-10-29 05:00:00 UTC)
-- Last block: 130,605,332 (2026-10-30 04:59:59 UTC)
+- First block: 130,413,458 | Last block: 130,605,332
 - Transfers: eth_getLogs on FLAPJAX (0x90c8889f428F9Ebb77BB8f15CAD3a50a9aC680df), topic0=Transfer, topic1=treasury
 - Treasury: 0x7C34E9e21eE28A49Ff0b84B61774119E6633359f
 - RPC: rpc-bsc.48.club (public BSC node)
-- Funder analysis: eth_getTransactionCount (nonce), eth_getCode (contract check), eth_getBalance at first FLAPJAX receipt block
 
 ## All 18 Treasury Outflows
 
@@ -37,7 +35,7 @@
 | 17 | 130553103 | 2026-10-29 17:28:10 COT | 0x0a66a9def221efc698b6bbeca82cae6729a8aba8 | 25,000 | 0x1ff5c6086cc2f3960c0e1460f0482e5af5f9c059d091bfcd1f2ac888c88401b1 |
 | 18 | 130600976 | 2026-10-29 23:27:19 COT | 0xe8797a6bb4693674d78e933e85cb159a0219d03b | 25,000 | 0x4c9170b0bab813ff1d43e8d200a3df72eb661a6446959a8485746ba2688d62bf |
 
-**Total sent:** 5,720,000 FLAPJAX  
+**Total sent:** 5,720,000 FLAPJAX
 **Distinct recipients:** 13
 
 ## First BNB Funder Analysis
@@ -46,53 +44,38 @@
 
 | Recipient | Type | Nonce | BNB at first FLAPJAX | BNB now |
 |-----------|------|-------|---------------------|---------|
-| 0x0a66a9def221efc698b6bbeca82cae6729a8aba8 | EOA | 0 | 0.000000 | 0.000000 |
-| 0x2ae18c3b2fc18545edd35beeaef97cc2ed908a02 | EOA | 0 | 0.000000 | 0.000006 |
-| 0x32cf8fffd9ada47abd09a7b2269dd4835ee994f7 | EOA | 0 | 0.000000 | 0.000000 |
-| 0x97cd18b8bbb629b17675d868259ea84c0a2a5a9c | EOA | 0 | 0.000000 | 0.000000 |
-| 0xa32fd912a81683804ec6bbd7ba4b6cad8e0ca3ac | EOA | 0 | 0.000000 | 0.000000 |
-| 0xab39aa1e2db4036e01cf7e919b3f239b3ff90160 | Contract | N/A | 0.000000 | 0.000000 |
-| 0xabc2c3daffa4c1963299da225c25f2aa7d4ddf62 | EOA | 0 | 0.000000 | 0.000000 |
-| 0xcf06c2f35e7671cbb1fcae42b50a447db189f1da | EOA | 0 | 0.000000 | 0.000000 |
-| 0xd16446a568f46bca1504422062f23767d8fa58d9 | EOA | 0 | 0.000000 | 0.000000 |
-| 0xdf4ff9d2f45f99f11a90b16f277d4b7edddb72a5 | EOA | 0 | 0.000000 | 0.000000 |
-| 0xe8797a6bb4693674d78e933e85cb159a0219d03b | EOA | 0 | 0.000000 | 0.000000 |
-| 0xfb200657f7266157a45dfcc6c09690726daa24e6 | EOA | 0 | 0.000000 | 0.000500 |
-| 0xfdf05af8ddce3621f01713e01721d6e9ad702ea8 | EOA | 0 | 0.000000 | 0.000000 |
+| 0x0a66a9def221efc698b6bbeca82cae6729a8aba8 | EOA | 0 | 0 | 0 |
+| 0x2ae18c3b2fc18545edd35beeaef97cc2ed908a02 | EOA | 0 | 0 | 0.000006 |
+| 0x32cf8fffd9ada47abd09a7b2269dd4835ee994f7 | EOA | 0 | 0 | 0 |
+| 0x97cd18b8bbb629b17675d868259ea84c0a2a5a9c | EOA | 0 | 0 | 0 |
+| 0xa32fd912a81683804ec6bbd7ba4b6cad8e0ca3ac | EOA | 0 | 0 | 0 |
+| 0xab39aa1e2db4036e01cf7e919b3f239b3ff90160 | Contract | N/A | 0 | 0 |
+| 0xabc2c3daffa4c1963299da225c25f2aa7d4ddf62 | EOA | 0 | 0 | 0 |
+| 0xcf06c2f35e7671cbb1fcae42b50a447db189f1da | EOA | 0 | 0 | 0 |
+| 0xd16446a568f46bca1504422062f23767d8fa58d9 | EOA | 0 | 0 | 0 |
+| 0xdf4ff9d2f45f99f11a90b16f277d4b7edddb72a5 | EOA | 0 | 0 | 0 |
+| 0xe8797a6bb4693674d78e933e85cb159a0219d03b | EOA | 0 | 0 | 0 |
+| 0xfb200657f7266157a45dfcc6c09690726daa24e6 | EOA | 0 | 0 | 0.0005 |
+| 0xfdf05af8ddce3621f01713e01721d6e9ad702ea8 | EOA | 0 | 0 | 0 |
 
 ### Findings
 
-1. **12 of 13 recipients are EOAs with nonce = 0** — they have never sent a single transaction. They are pure receive-only wallets.
-
-2. **1 of 13 recipients is a smart contract** (0xab39aa1e2db4036e01cf7e919b3f239b3ff90160) — received 3,000,000 FLAPJAX, the largest single transfer.
-
-3. **0 of 13 recipients have ever sent a transaction** (nonce = 0 for all EOAs).
-
-4. **All 13 recipients had 0 BNB at their first FLAPJAX receipt block.** No recipient held BNB before receiving FLAPJAX.
-
-5. **2 recipients received BNB after the audit window** via internal transactions (no direct BNB transfer found in the block):
-   - 0x2ae18c3b2fc18545edd35beeaef97cc2ed908a02: 0.00000626 BNB at block 130,832,944 (internal tx)
-   - 0xfb200657f7266157a45dfcc6c09690726daa24e6: 0.0005 BNB at block 130,832,972 (internal tx)
+1. **12 of 13 recipients are EOAs with nonce = 0** — pure receive-only wallets.
+2. **1 of 13 is a smart contract** (0xab39aa1e2db4036e01cf7e919b3f239b3ff90160) — received 3,000,000 FLAPJAX, the largest single transfer.
+3. **All 13 recipients had 0 BNB at their first FLAPJAX receipt block.**
+4. **2 recipients received BNB after the audit window** via internal transactions.
 
 ### Operator Groups
 
-Since all 13 recipients had 0 BNB at their first FLAPJAX receipt and none have ever sent a transaction, **no recipient can be linked to another via a shared first BNB funder.** Each recipient is an independent wallet by the funder method.
+No recipient can be linked to another via a shared first BNB funder. Each recipient is an independent wallet by the funder method.
 
-- **Distinct operators implied:** 13 (one per recipient address)
-- **No sybil links found** by the first-BNB-funder method
-- **Caveat:** The 12 never-funded EOAs could in principle belong to a single operator using fresh payout-only wallets. This method proves they have no BNB funding link, not that they have distinct owners.
-
-### Transfers Not Explained
-
-None. All 18 transfers are plain treasury-to-recipient FLAPJAX Transfer logs, verifiable via eth_getLogs on any public BSC node.
+- **Distinct operators implied:** 13
+- **No sybil links found** by first-BNB-funder method
+- **Caveat:** The 12 never-funded EOAs could belong to a single operator using fresh payout-only wallets.
 
 ## Verification
 
-Re-check any row:
-```
-eth_getLogs on FLAPJAX (0x90c8889f428F9Ebb77BB8f15CAD3a50a9aC680df)
-  topic0 = 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
-  topic1 = 0x0000000000000000000000007C34E9e21eE28A49Ff0b84B61774119E6633359f
-  fromBlock = 0x7c7f402 (130413458)
-  toBlock = 0x7ca6ce4 (130605332)
-```
+Re-check any row via eth_getLogs on FLAPJAX (0x90c8889f428F9Ebb77BB8f15CAD3a50a9aC680df):
+- topic0 = 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+- topic1 = 0x0000000000000000000000007C34E9e21eE28A49Ff0b84B61774119E6633359f
+- fromBlock = 0x7c7f402 (130413458), toBlock = 0x7ca6ce4 (130605332)
